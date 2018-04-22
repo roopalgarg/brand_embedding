@@ -35,6 +35,23 @@ brands.
 cd brand_embedding
 python brand_embedding/build_emb.py build
 ```
+This should iterate through the brand list giving out logs as pages are processed from wikipedia
+```
+04/21/2018 21:35:04:INFO: building knowledge base
+04/21/2018 21:35:14:INFO: Manchester United: https://en.wikipedia.org/wiki/Manchester_United_F.C.
+04/21/2018 21:35:15:INFO: Honda: https://en.wikipedia.org/wiki/Honda
+04/21/2018 21:35:16:INFO: Los Angeles Lakers: https://en.wikipedia.org/wiki/Los_Angeles_Lakers
+04/21/2018 21:35:18:INFO: Gap Inc.: https://en.wikipedia.org/wiki/Gap_Inc.
+04/21/2018 21:35:19:INFO: Ford Motor Company: https://en.wikipedia.org/wiki/Ford_Motor_Company
+```
+and towards the end:
+
+```
+04/21/2018 21:36:05:INFO: saving knowledge base to: `/home/bluefire/workspace/projects/brand_embedding/brand_embedding/data/brand_emb.json`
+04/21/2018 21:36:05:INFO: knowledge base compiled
+```
+
+The embeddings would be saved to the `fpath_save` path in the `build` function.
 
 * Querying the embeddings for similarity:
 ```
