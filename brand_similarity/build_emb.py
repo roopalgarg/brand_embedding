@@ -15,7 +15,7 @@ __author__ = "roopal_garg"
 SET_IGNORE_WORDS = set(stopwords.words())
 
 
-def build(fpath_save=DEFAULT_KB_SAVE_FPATH, set_brands=DEFAULT_SET_BRANDS, set_ignore_words=SET_IGNORE_WORDS):
+def build(set_brands=DEFAULT_SET_BRANDS, fpath_save=DEFAULT_KB_SAVE_FPATH, set_ignore_words=SET_IGNORE_WORDS):
 
     logger.info("building knowledge base")
     dict_brand_name_emb = dict()

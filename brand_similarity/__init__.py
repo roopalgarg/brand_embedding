@@ -3,6 +3,8 @@ import sys
 import logging
 
 __author__ = "roopal_garg"
+__version__ = (1, 0, 0)
+
 
 logging.basicConfig(
     stream=sys.stdout,
@@ -12,7 +14,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
 
 _brand_list_fpath = os.path.join(os.path.dirname(__file__), 'data/brand_list')
 DEFAULT_SET_BRANDS = set()
