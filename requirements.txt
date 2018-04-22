@@ -1,0 +1,4 @@
+numpy==1.14.2
+nltk==3.2.5
+wikipedia==1.4.0
+fire==0.1.3
