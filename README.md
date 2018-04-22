@@ -5,7 +5,7 @@ be queried to find the most similar or the least distant instances representing 
 
 ### Methodology ###
 
-* version 1: It is a simple technique which takes the mean of the `Glove` word embedding for each word present on the 
+* `version 1`: It is a simple technique which takes the mean of the `Glove` word embedding for each word present on the 
 landing page of the brand in `Wikipedia`. The idea is that similar brands talk about overlapping concepts. Working
 with word embeddings frees us from worrying about the exact match in jargon or vocab.
 
