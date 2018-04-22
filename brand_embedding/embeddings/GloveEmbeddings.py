@@ -7,7 +7,7 @@ __author__ = "roopal_garg"
 
 class GloveEmbeddings:
     GLOVE_DIR = ENV_EMBEDDING_GLOVE_6B_FPATH
-    EMBEDDING_DIM = 300
+    EMBEDDING_DIM = 200
 
     @staticmethod
     def get_dict_word_embedding(path=GLOVE_DIR, embedding_dim=EMBEDDING_DIM):
@@ -21,3 +21,6 @@ class GloveEmbeddings:
             word2emb[word] = coefs
         f.close()
         return word2emb
+
+
+GloveEmbeddings.get_dict_word_embedding()

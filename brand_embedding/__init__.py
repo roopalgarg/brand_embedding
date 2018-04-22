@@ -28,11 +28,4 @@ DEFAULT_BRAND_EMB_SAVE_FPATH = os.path.join(os.path.dirname(__file__), 'data/bra
 
 _home_dir = os.path.expanduser('~')
 
-"""base directory"""
-ENV_EMBEDDING_DIR = os.environ.get('ENV_EMBEDDING_DIR', os.path.join(_home_dir, 'data/glove_embeddings'))
-
-"""everything glove"""
-ENV_EMBEDDING_GLOVE_6B_DIR = os.environ.get('ENV_EMBEDDING_GLOVE_6B_DIR', os.path.join(ENV_EMBEDDING_DIR, 'glove.6B'))
-ENV_EMBEDDING_GLOVE_6B_FPATH = os.environ.get(
-    'ENV_EMBEDDING_GLOVE_6B_FPATH', os.path.join(ENV_EMBEDDING_GLOVE_6B_DIR, 'glove.6B.{dim}d.txt')
-)
+ENV_EMBEDDING_GLOVE_6B_FPATH = os.path.join(os.path.dirname(__file__), 'data/glove_embeddings/glove.6B.{dim}d.txt')
