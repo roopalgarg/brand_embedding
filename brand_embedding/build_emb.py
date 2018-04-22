@@ -7,7 +7,7 @@ import codecs
 from string import punctuation
 from nltk.corpus import stopwords
 
-from brand_embedding import DEFAULT_SET_BRANDS, DEFAULT_KB_SAVE_FPATH, logger
+from brand_embedding import DEFAULT_SET_BRANDS, DEFAULT_BRAND_EMB_SAVE_FPATH, logger
 from brand_embedding.embeddings.GloveEmbeddings import GloveEmbeddings
 
 __author__ = "roopal_garg"
@@ -15,7 +15,7 @@ __author__ = "roopal_garg"
 SET_IGNORE_WORDS = set(stopwords.words())
 
 
-def build(set_brands=DEFAULT_SET_BRANDS, fpath_save=DEFAULT_KB_SAVE_FPATH, set_ignore_words=SET_IGNORE_WORDS):
+def build(set_brands=DEFAULT_SET_BRANDS, fpath_save=DEFAULT_BRAND_EMB_SAVE_FPATH, set_ignore_words=SET_IGNORE_WORDS):
 
     logger.info("building knowledge base")
     dict_brand_name_emb = dict()

@@ -4,13 +4,13 @@ import numpy as np
 import json
 import codecs
 
-from brand_embedding import logger, DEFAULT_KB_SAVE_FPATH
+from brand_embedding import logger, DEFAULT_BRAND_EMB_SAVE_FPATH
 
 
 __author__ = "roopal_garg"
 
 
-def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_KB_SAVE_FPATH, dict_kb=None):
+def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SAVE_FPATH, dict_kb=None):
 
     if dict_kb is None:
         with codecs.open(kb_fpath, encoding='utf-8') as fp:
@@ -35,7 +35,7 @@ def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_KB_SAVE_FPATH, dict_kb
     return sorted_dict
 
 
-def query_list(list_target_brand_name, top_n=None, kb_fpath=DEFAULT_KB_SAVE_FPATH):
+def query_list(list_target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SAVE_FPATH):
 
     with codecs.open(kb_fpath, encoding='utf-8') as fp:
         dict_kb = json.load(fp)

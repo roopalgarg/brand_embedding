@@ -24,12 +24,12 @@ with open(_brand_list_fpath) as fp:
             continue
         DEFAULT_SET_BRANDS.add(line)
 
-DEFAULT_KB_SAVE_FPATH = os.path.join(os.path.dirname(__file__), 'data/brand_kb.json')
+DEFAULT_BRAND_EMB_SAVE_FPATH = os.path.join(os.path.dirname(__file__), 'data/brand_emb.json')
 
 _home_dir = os.path.expanduser('~')
 
 """base directory"""
-ENV_EMBEDDING_DIR = os.environ.get('ENV_EMBEDDING_DIR', os.path.join(_home_dir, 'data/embeddings'))
+ENV_EMBEDDING_DIR = os.environ.get('ENV_EMBEDDING_DIR', os.path.join(_home_dir, 'data/glove_embeddings'))
 
 """everything glove"""
 ENV_EMBEDDING_GLOVE_6B_DIR = os.environ.get('ENV_EMBEDDING_GLOVE_6B_DIR', os.path.join(ENV_EMBEDDING_DIR, 'glove.6B'))
