@@ -1,4 +1,4 @@
-# brand_similarity
+# brand_embedding
 
 The repo maps the similarity or closeness between different commercial brands. It builds a `brand embedding` which can 
 be queried to find the most similar or the least distant instances representing similar brands.
