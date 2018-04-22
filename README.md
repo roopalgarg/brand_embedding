@@ -5,7 +5,9 @@ be queried to find the most similar or the least distant instances representing 
 
 ### Download Glove Embeddings ###
 Download `Glove` word embeddings from [glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip) to 
-`brand_embedding/data/glove_embeddings`.
+`brand_embedding/data/glove_embeddings`. 
+
+The file structure should look like: `brand_embedding/data/glove_embeddings/glove.6B.200d.txt`
 
 
 ### Methodology ###
