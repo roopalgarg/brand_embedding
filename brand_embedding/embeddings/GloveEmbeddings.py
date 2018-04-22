@@ -1,6 +1,6 @@
 import numpy as np
 
-from brand_similarity import ENV_EMBEDDING_GLOVE_6B_FPATH
+from brand_embedding import ENV_EMBEDDING_GLOVE_6B_FPATH
 
 __author__ = "roopal_garg"
 

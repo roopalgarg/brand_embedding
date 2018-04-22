@@ -7,8 +7,8 @@ import codecs
 from string import punctuation
 from nltk.corpus import stopwords
 
-from brand_similarity import DEFAULT_SET_BRANDS, DEFAULT_KB_SAVE_FPATH, logger
-from brand_similarity.embeddings.GloveEmbeddings import GloveEmbeddings
+from brand_embedding import DEFAULT_SET_BRANDS, DEFAULT_KB_SAVE_FPATH, logger
+from brand_embedding.embeddings.GloveEmbeddings import GloveEmbeddings
 
 __author__ = "roopal_garg"
 

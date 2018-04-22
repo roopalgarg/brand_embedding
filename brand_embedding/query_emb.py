@@ -4,7 +4,7 @@ import numpy as np
 import json
 import codecs
 
-from brand_similarity import logger, DEFAULT_KB_SAVE_FPATH
+from brand_embedding import logger, DEFAULT_KB_SAVE_FPATH
 
 
 __author__ = "roopal_garg"
