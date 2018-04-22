@@ -35,6 +35,8 @@ def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SAVE_FPATH, 
     if top_n:
         sorted_dict = sorted_dict[: top_n]
 
+    logger.debug("{}: {}".format(target_brand_name, sorted_dict))
+
     return sorted_dict
 
 
@@ -43,10 +45,13 @@ def query_list(list_target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SA
     with codecs.open(kb_fpath, encoding='utf-8') as fp:
         dict_kb = json.load(fp)
 
+    dict_results = dict()
     for idx, target_brand_name in enumerate(list_target_brand_name, start=1):
-        sorted_dict_candidate_brands = query(target_brand_name, top_n=top_n, dict_kb=dict_kb)
+        sorted_candidate_brands = query(target_brand_name, top_n=top_n, dict_kb=dict_kb)
 
-        logger.info("{}: {}".format(target_brand_name, sorted_dict_candidate_brands))
+        dict_results[target_brand_name] = sorted_candidate_brands
+
+    return dict_results
 
 
 if __name__ == '__main__':
