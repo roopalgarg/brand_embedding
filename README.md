@@ -33,6 +33,7 @@ brands.
 * Building the embeddings: 
 ```
 cd brand_embedding
+
 python brand_embedding/build_emb.py build
 ```
 This should iterate through the brand list giving out logs as pages are processed from wikipedia
@@ -56,6 +57,7 @@ The embeddings would be saved to the `fpath_save` path in the `build` function.
 * Querying the embeddings for similarity:
 ```
 cd brand_embedding
+
 python brand_embedding/query_emb.py query --target_brand_name=Toyota --top_n=5
 
 ["Honda", 0.5642089940473477]
@@ -63,4 +65,13 @@ python brand_embedding/query_emb.py query --target_brand_name=Toyota --top_n=5
 ["General Motors", 0.6618795641050003]
 ["Suzuki", 0.7336843346403088]
 ["Chevrolet", 0.8425528515308258]
+```
+
+```
+cd brand_embedding
+
+python brand_embedding/query_emb.py query_list --list_target_brand_name='["Liverpool F.C.", "Google"]' --top_n=5
+Liverpool F.C.: [(u'Chelsea F.C.', 0.3479228805034268), (u'Manchester United', 0.37073191660239563), (u'Arsenal F.C.', 0.41666102106971), (u'Cincinnati Bengals', 1.1081518545348459), (u'Los Angeles Rams', 1.171184292207359)]
+Google: [(u'Facebook', 0.563797545845138), (u'Amazon Inc', 0.634932045374182), (u'Apple Inc', 0.6743377279657304), (u'Gap Inc.', 1.0265872931260083), (u'Nestle', 1.0296603447159702)]
+
 ```
