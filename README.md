@@ -3,9 +3,14 @@
 The repo maps the similarity or closeness between different commercial brands. It builds a `brand embedding` which can 
 be queried to find the most similar or the least distant instances representing similar brands.
 
+### Download Glove Embeddings ###
+Download `Glove` word embeddings from [glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip) to 
+`brand_embedding/data/embeddings`.
+
+
 ### Methodology ###
 
-* `version 1`: It is a simple technique which takes the mean of the `Glove` word embedding for each word present on the 
+* `release 1`: It is a simple technique which takes the mean of the `Glove` word embedding for each word present on the 
 landing page of the brand in `Wikipedia`. The idea is that similar brands talk about overlapping concepts. Working
 with word embeddings frees us from worrying about the exact match in jargon or vocab.
 
