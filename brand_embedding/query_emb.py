@@ -12,6 +12,9 @@ __author__ = "roopal_garg"
 
 def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SAVE_FPATH, dict_kb=None):
 
+    if type(target_brand_name) == str:
+        target_brand_name = unicode(target_brand_name)
+
     if dict_kb is None:
         with codecs.open(kb_fpath, encoding='utf-8') as fp:
             dict_kb = json.load(fp)
@@ -21,7 +24,7 @@ def query(target_brand_name, top_n=None, kb_fpath=DEFAULT_BRAND_EMB_SAVE_FPATH, 
     dict_brand_name_emb_distance = dict()
     for candidate_brand_name, candidate_emb in dict_kb.iteritems():
 
-        if candidate_brand_name == target_brand_emb:
+        if candidate_brand_name == target_brand_name:
             continue
 
         emb_dist = np.linalg.norm(target_brand_emb - np.array(candidate_emb))

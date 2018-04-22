@@ -58,9 +58,9 @@ The embeddings would be saved to the `fpath_save` path in the `build` function.
 cd brand_embedding
 python brand_embedding/query_emb.py query --target_brand_name=Toyota --top_n=5
 
-["Toyota", 0.0]
 ["Honda", 0.5642089940473477]
 ["Ford Motor Company", 0.5905087678182305]
 ["General Motors", 0.6618795641050003]
 ["Suzuki", 0.7336843346403088]
+["Chevrolet", 0.8425528515308258]
 ```
