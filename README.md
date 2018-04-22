@@ -72,7 +72,6 @@ cd brand_embedding
 
 python brand_embedding/query_emb.py query_list --list_target_brand_name='["Liverpool F.C.", "Google"]' --top_n=5
 
-Liverpool F.C.: [(u'Chelsea F.C.', 0.3479228805034268), (u'Manchester United', 0.37073191660239563), (u'Arsenal F.C.', 0.41666102106971), (u'Cincinnati Bengals', 1.1081518545348459), (u'Los Angeles Rams', 1.171184292207359)]
-Google: [(u'Facebook', 0.563797545845138), (u'Amazon Inc', 0.634932045374182), (u'Apple Inc', 0.6743377279657304), (u'Gap Inc.', 1.0265872931260083), (u'Nestle', 1.0296603447159702)]
-
+Google:         [["Facebook", 0.563797545845138], ["Amazon Inc", 0.634932045374182], ["Apple Inc", 0.6743377279657304], ["Gap Inc.", 1.0265872931260083], ["Nestle", 1.0296603447159702]]
+Liverpool F.C.: [["Chelsea F.C.", 0.3479228805034268], ["Manchester United", 0.37073191660239563], ["Arsenal F.C.", 0.41666102106971], ["Cincinnati Bengals", 1.1081518545348459], ["Los Angeles Rams", 1.171184292207359]]
 ```
